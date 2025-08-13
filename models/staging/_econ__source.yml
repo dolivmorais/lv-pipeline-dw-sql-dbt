@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: econ
+    schema: raw
+    description: Dados de e-commerce para a jaffe Shop
+    freshness:
+      warn_after:
+        count: 24
+        period: hour
+      error_after:
+        count: 48
+        period: hour
+    tables:
+      - name: raw_customers
+        description: Tabela de clientes
+      - name: raw_items
+        description: Tabela de itens
+      - name: raw_orders_2023
+        description: Tabela de pedidos
+      - name: raw_orders_2024
+        description: Tabela de pedidos
+      - name: raw_products
+        description: Tabela de produtos
+      - name: raw_stores
+        description: Tabela de lojas
+      - name: raw_supplies
+        description: Tabela de fornecedores
